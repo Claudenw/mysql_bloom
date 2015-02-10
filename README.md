@@ -7,7 +7,35 @@ License: Apache
 
 Bloomfilters are assumed to be arrays of bytes in little-endian order.  
 
-functions:
+Requires
+--------
+
+Mysql client and server headers are required to compile this code.
+
+Installation
+------------
+
+Please do the following in the root of the source directory tree: 
+
+    aclocal 
+    autoconf 
+    autoheader 
+    automake --add-missing
+
+    ./configure
+    make
+    sudo make install
+    sudo make installdb
+
+
+To remove the library from your system:
+
+    make uninstalldb
+    make uninstall
+
+
+Functions
+---------
 
     bloommatch( blob a, blob b )
 performs a byte by bytes check of  (a & b == a).  if true then "a" may be found in "b", if false then "a" is not in "b".
