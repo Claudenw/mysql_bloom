@@ -1,0 +1,4 @@
+USE mysql;
+
+DROP FUNCTION IF EXISTS bloommatch;
+DROP FUNCTION IF EXISTS bloomupdate;
